@@ -1,6 +1,6 @@
 # Panopto Delete Users Tool
 
-This is a Python Tkinter GUI application to merge user files and delete matched users via the Panopto API.
+This is a Python Tkinter GUI application to merge user files and delete users via the Panopto API.
 
 ---
 
@@ -36,10 +36,10 @@ This is a Python Tkinter GUI application to merge user files and delete matched 
     Edit `config.py` with your Panopto API credentials:
 
     ```python
-    userkey = "your_userkey"
-    password = "your_password"
-    applicationkey = "your_applicationkey"
-    servername = "your_servername"
+    userkey = "your_userkey" # admin's username 
+    password = "your_password" # admin's password
+    applicationkey = "your_applicationkey" # available through "Identity Providers" on Panopto
+    servername = "your_servername" # in this case, "gettysburg.hosted.panopto.com"
 
 5. **Run the application**
 
