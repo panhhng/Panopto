@@ -1,4 +1,3 @@
-# main.py
 import tkinter as tk
 from tkinter import messagebox
 from config import userkey, password, applicationkey, servername
@@ -32,10 +31,19 @@ def on_merge_click():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
+def preview_users_popup(emails):
+    preview = "\n".join(emails[:10])
+    preview += "\n..." if len(emails) > 10 else ""
+    return messagebox.askyesno(
+        "Confirm Deletion",
+        f"{len(emails)} users will be deleted from Panopto:\n\n{preview}\n\nProceed?"
+    )
+
 def on_delete_click():
     try:
-        count = delete_users(client, AuthenticationInfo, merged_df)
-        messagebox.showinfo("Success", f"{count} users deleted from Panopto.")
+        count = delete_users(client, AuthenticationInfo, merged_df, preview_callback=preview_users_popup)
+        if count > 0:
+            messagebox.showinfo("Success", f"{count} users deleted from Panopto.")
     except Exception as e:
         messagebox.showerror("Error", str(e))
 

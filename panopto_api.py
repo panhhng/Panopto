@@ -6,14 +6,20 @@ def get_client(servername):
 def get_array_type(client):
     return client.get_type('{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfguid')
 
-def delete_users(client, AuthenticationInfo, merged_df):
+def delete_users(client, AuthenticationInfo, merged_df, preview_callback=None):
     if merged_df is None or merged_df.empty:
         raise ValueError("No merged users to delete.")
 
     user_ids = merged_df['UserID'].dropna().astype(str).tolist()
+    emails = merged_df['Email'].dropna().tolist()
 
     if not user_ids:
         raise ValueError("No valid UserIDs found.")
+
+    if preview_callback:
+        proceed = preview_callback(emails)
+        if not proceed:
+            return 0 
 
     array_type = get_array_type(client)
     guid_list = array_type(guid=user_ids)
