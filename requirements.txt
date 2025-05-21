@@ -1,0 +1,4 @@
+zeep
+pandas
+openpyxl
+tk
