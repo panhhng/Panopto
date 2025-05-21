@@ -45,3 +45,9 @@ This is a Python Tkinter GUI application to merge user files and delete matched 
 
     ```python
     python3 main.py
+
+    - Once it runs, it launches an application that enables you to browse files on your computer 
+    - Put your Excel or .csv files into the boxes
+    - Click "Merge Files" to map users' emails with IDs
+    - After merging, it will export another .csv file that contains only email and IDs in the current folder
+    - Click "Delete Users" to delete users on Panopto
