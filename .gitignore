@@ -1,4 +1,5 @@
-./config.py
-./mailandid.xlsx
-./mailonly.xlsx
-./merged_users.csv
+config.py
+mailandid.xlsx
+mailonly.xlsx
+merged_users.csv
+/__pycache__
