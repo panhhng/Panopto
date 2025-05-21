@@ -30,7 +30,7 @@ This is a Python Tkinter GUI application to merge user files and delete users vi
 3. **Install dependencies**
 
     ```bash
-    pip install zeep pandas openpyxl
+    pip install zeep pandas openpyxl # or pip3 if using Python 3.x
 
 4. **Configure credentials**
     Edit `config.py` with your Panopto API credentials:
@@ -46,8 +46,8 @@ This is a Python Tkinter GUI application to merge user files and delete users vi
     ```python
     python3 main.py
 
-    - Once it runs, it launches an application that enables you to browse files on your computer 
-    - Put your Excel or .csv files into the boxes
-    - Click "Merge Files" to map users' emails with IDs
-    - After merging, it will export another .csv file that contains only email and IDs in the current folder
-    - Click "Delete Users" to delete users on Panopto
+- Once it runs, it launches an application that enables you to browse files on your computer 
+- Put your Excel or .csv files into the boxes
+- Click "Merge Files" to map users' emails with IDs
+- After merging, it will export another .csv file that contains only email and IDs in the current folder
+- Click "Delete Users" to delete users on Panopto
