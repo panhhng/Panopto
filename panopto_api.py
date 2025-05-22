@@ -10,7 +10,7 @@ def delete_users(client, AuthenticationInfo, merged_df, preview_callback=None):
     if merged_df is None or merged_df.empty:
         raise ValueError("No merged users to delete.")
 
-    user_ids = merged_df['UserID'].dropna().astype(str).tolist()
+    user_ids = merged_df['User ID'].dropna().astype(str).tolist()
     emails = merged_df['Email'].dropna().tolist()
 
     if not user_ids:

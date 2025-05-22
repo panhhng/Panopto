@@ -12,8 +12,8 @@ def merge_files(all_users_path, grads_path):
     df_all = pd.read_csv(all_users_path) if all_users_path.endswith('.csv') else pd.read_excel(all_users_path)
     df_grads = pd.read_csv(grads_path) if grads_path.endswith('.csv') else pd.read_excel(grads_path)
 
-    if 'Email' not in df_all.columns or 'UserID' not in df_all.columns:
-        raise ValueError("All Users file must contain 'Email' and 'UserID' columns.")
+    if 'Email' not in df_all.columns or 'User ID' not in df_all.columns:
+        raise ValueError("All Users file must contain 'Email' and 'User ID' columns.")
     if 'Email' not in df_grads.columns:
         raise ValueError("Graduate file must contain 'Email' column.")
 
