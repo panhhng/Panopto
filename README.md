@@ -44,7 +44,7 @@ This is a Python Tkinter GUI application to merge user files and delete users vi
 5. **Run the application**
 
     ```python
-    python3 main.py
+    python main.py # or 'python3', depending on your computer's version
 
 - Once it runs, it launches an application that enables you to browse files on your computer 
 - Put your Excel or .csv files into the boxes
